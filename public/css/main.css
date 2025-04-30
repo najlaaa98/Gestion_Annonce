@@ -1,0 +1,443 @@
+*{
+    margin:0;
+    padding:0; 
+}
+.panel{
+    height:20px;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    background-color: #4e90fe;
+    color:#f2f9ec;
+}
+.panel .p1{}
+
+.panel .panel-child{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+.account1,.account2{
+    display:flex;
+    align-items: center;
+    gap:5px;
+    color:#ffffff;
+}
+
+.account1 svg,.account2 svg{
+    height:14px;
+    width: 14px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 140px;
+}
+header .items{
+    display: flex;
+    height: 100%;
+    flex-basis: 74%;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+}
+.search-form input{
+    width: 450px;
+    height: 5px ;
+    border: solid 2px #8d8d8d;
+    border-radius: 5px;
+    position: relative;
+    padding: 20px;
+    font-size: 15px;
+}
+.search-form input:focus{
+    outline: #4ee9fe 2px solid;
+} 
+.search-form button{
+    width: 100px;
+    height: 47px ;
+    background-color: #528ff5;
+    border-radius:0px 5px 5px  0px;
+    border: none;
+    color: #f2f9ec;
+    margin-left: -101px;
+    position: absolute;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+header .shop{
+    display: flex;
+    height: 100%;
+    width: 220px;
+    justify-content: space-between;
+}
+header .shop svg{
+    width: 34px;
+    padding: 0 18px;
+    height: 100%;
+    background-color: #4f4f4f;
+    border-radius: 5px 0 0 5px;
+}
+header a{
+    height: 50%;
+    text-decoration: none;
+}
+.shop div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #80aaf5;
+    color: #ffff;
+    flex: 1;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Cairo', sans-serif;
+}
+.shop div span{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+}
+.div {
+    width: 100%;
+    max-width: 100%;
+    height: 6vh;
+    background: #1965a3;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+ul {
+    list-style: none;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.ul1 {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.li1 {
+    position: relative;
+    transform: translateY(40%);
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.li1::after {
+    content: '';
+    border-left: 1px solid #fff;
+    position: relative;
+    left: 49px;
+}
+section{
+    display: flex;
+    height:140px;
+    gap: 20px;
+    padding: 20px 40px;
+}
+section .pub{
+    display: flex;
+    align-items: center;
+    flex:1;
+}
+section .pub .img-section{
+    width: 30%;
+    
+}
+section .pub img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 2px #569df7;
+}
+section .pub .p-section{
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 10px;
+    align-self: baseline;
+}
+section .pub .p-section h3{
+    color: #569df7 ;
+}
+section .pub .p-section span{
+    border-radius: 50%;
+    background-color: #569df7;
+    color: #fff;
+    font-weight: bold ; 
+    padding: 2px 8px;
+ 
+}
+.side{
+    width: 20%;
+    color: #fff;
+}
+.side .login{
+    padding: 20px 0;
+}
+.register{
+    width: 40%;
+    margin: auto;
+}
+.content{
+    width:80%;
+    padding-top:30px;
+}
+.login form,.register form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 2px;
+}
+.login form input,.register form input,.register form select{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+}
+.login form button,.register form button,.create a{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+    width: 80%;
+    background-color: #569df7;
+    color: #fff;
+    align-self: center;
+    margin-top: 6px;
+    cursor:pointer;
+}
+.side .bar h1,.login h1,.panel-name h1{
+    background-color: #4f8ff8;
+    font-size: 18px;
+    width: 60%;
+    padding:6px;
+    display:flex;
+    align-items: center;
+    gap:6px;
+    border-radius:0px 60px 0px 0px ;
+}
+.login h1{
+    position:relative;
+    font-size: 16px;
+}
+.login h1::before,.admin-panel h1::before{
+    content:'';
+    position: absolute;
+    height: 4px;
+    width:150%;
+    bottom:0;
+    background-color: #4f8ff8;
+}
+.side .bar svg,.login svg,.panel-name h1 svg{
+    height: 20px;
+    width: 20px;    
+}
+.panel-name h1{
+    color: #fff;
+    position: relative;
+}
+.panel-name h1::before{
+    width: 163%;
+}
+.side .bar .menu{
+    background-color: #4f8ff8;
+    padding:20px 0px 10px 20px;
+}
+.bar .menu ul{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.bar .menu li{
+    text-indent: 8px;
+}
+.bar .menu li:not(:last-child){
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
+}
+.main{
+    display: flex;
+}
+.logout{
+    color: #fff;
+}
+.annonce{
+    display: flex;
+    flex-direction: column;
+    padding:0px 20px
+}
+.create{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.create a,.tab td a,.tab td button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+    width: 120px;
+    background-color: #569df7;
+    color: #fff;
+    align-self: center;
+    margin-top: 6px;
+    cursor:pointer;
+    text-decoration:none;
+}
+.tab td button{
+    margin-top: 14px;
+    background-color: #e13636;
+}
+.tab td .btn-primary{
+    background-color: #169621;
+}
+.bar{
+    position: sticky;
+    top: 100px;
+}
+.create{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.trier{
+    position: sticky;
+    top: 45px;
+    background-color: white;
+}
+thead{
+    position: sticky;
+    top: 114px;
+    background-color: white;
+}
+.trier{
+    margin: 10px 0;
+    border-top: 1px solid #8d8d8d;
+    border-bottom: 1px solid #8d8d8d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 14px 0;
+}
+.trier select{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+}
+.tab table{
+    width:100%;
+    text-align: center;
+}
+.tab table td ul{
+    width: 120px;
+}
+.tab tr{
+    border-bottom:1px solid #8d8d8d;
+}
+.gestion{
+    display: flex;
+    gap: 10px;
+    background-color: #f4f4f4;
+}
+.admin-panel{
+    padding:0 20px;
+}
+.gestion img{
+    width:60px;
+}
+.gestion a{
+    border: 1px solid #4f4f4f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    margin: 16px 0;
+    border-radius: 5px;
+    padding: 16px;
+    cursor: pointer;
+    gap: 14px;
+}
+.g{
+    background-color: #fff;
+    text-decoration: none;
+}
+.div .ul1 a{
+    text-decoration: none;
+} 
+ .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+} 
+.c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.c form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 2px;
+    width: 450px;
+}
+.c form input,.c form select,.c form textarea{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+    width: 250px;
+    resize: none;
+}
+.c form select{
+    width: 292px;
+}
+.c form button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #8d8d8d;
+    width: 80%;
+    background-color: #569df7;
+    color: #fff;
+    align-self: center;
+    margin-top: 6px;
+    cursor:pointer;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+}
+.panel-col{
+    margin-left: 20px;
+}
+.files{
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+}
+.card{
+    border: 1px solid #8d8d8d;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 20px;
+}
+.card h1{
+    align-self: center;
+    width:25%;
+    color:#569df7 ;
+}
+ 
