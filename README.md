@@ -1,66 +1,133 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Gestion Annonce
+Une application complète de gestion d'annonces développée avec Laravel permettant de publier et gérer des annonces d'achat, de location, d'emploi et plus encore.
+À propos de l'application
+Gestion Annonce est une plateforme polyvalente qui permet aux utilisateurs de:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Publier des annonces de vente/achat de biens
+Proposer des locations immobilières
+Diffuser des offres d'emploi
+Rechercher parmi les annonces avec filtres avancés
+Communiquer entre acheteurs et vendeurs
 
-## About Laravel
+Prérequis
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+PHP >= 8.1
+Composer
+MySQL ou MariaDB
+Node.js et NPM
+Git
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Installation
+Suivez ces étapes pour installer et configurer l'application Gestion Annonce.
+1. Cloner le dépôt
+bashgit clone https://github.com/najlaaa98/Gestion_Annonce.git
+cd Gestion_Annonce
+2. Installer les dépendances PHP
+bashcomposer install
+3. Installer les dépendances JavaScript
+bashnpm install
+4. Configurer l'environnement
+Copiez le fichier .env.example en .env et configurez les variables d'environnement:
+bashcp .env.example .env
+Modifiez le fichier .env en renseignant les informations de votre base de données:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=gestion_annonce
+DB_USERNAME=root
+DB_PASSWORD=
+5. Générer la clé d'application
+bashphp artisan key:generate
+6. Créer la base de données
+Créez une base de données vide dans MySQL/MariaDB avec le nom spécifié dans votre fichier .env (par défaut gestion_annonce).
+7. Exécuter les migrations et les seeders
+bashphp artisan migrate --seed
+Lancement de l'application
+Démarrer le serveur de développement
+bashphp artisan serve
+L'application sera accessible à l'adresse http://localhost:8000.
+Compiler les assets
+En mode développement:
+bashnpm run dev
+Pour la production:
+bashnpm run build
+Fonctionnalités principales
+Gestion des annonces
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Annonces d'achat/vente: Publiez vos biens à vendre avec photos et descriptions détaillées
+Annonces de location: Proposez des locations immobilières avec tarifs et disponibilités
+Offres d'emploi: Publiez et consultez des offres d'emploi par secteur d'activité
+Autres services: Proposez divers services aux utilisateurs de la plateforme
 
-## Learning Laravel
+Fonctionnalités utilisateurs
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Inscription et authentification sécurisée
+Tableau de bord personnalisé
+Gestion du profil utilisateur
+Système de messagerie intégré
+Favoris et historique de recherche
+Notifications en temps réel
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Recherche avancée
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Filtres par catégorie, prix, localisation
+Tri par pertinence, date ou prix
+Recherche géolocalisée
+Alertes et sauvegardes de recherche
 
-## Laravel Sponsors
+Structure de l'application
+Contrôleurs principaux
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+AnnonceController.php: Gestion des annonces
+UserController.php: Gestion des utilisateurs
+MessageController.php: Système de messagerie
+CategorieController.php: Gestion des catégories d'annonces
 
-### Premium Partners
+Modèles
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Annonce.php: Modèle pour les annonces
+User.php: Modèle utilisateur étendu
+Categorie.php: Catégories d'annonces
+Message.php: Système de messagerie
 
-## Contributing
+Vues
+Les vues de l'application sont situées dans le répertoire resources/views/ et sont organisées comme suit:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+layouts/ - Contient les layouts principaux
+annonces/ - Vues des annonces par catégorie
+auth/ - Authentification
+users/ - Profils et tableaux de bord
+admin/ - Interface d'administration
 
-## Code of Conduct
+Commandes utiles
+Vider le cache
+bashphp artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+Actualiser la base de données
+bashphp artisan migrate:fresh --seed
+Lancer les tests
+bashphp artisan test
+Déploiement en production
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Configurez votre fichier .env pour la production:
+APP_ENV=production
+APP_DEBUG=false
+APP_URL=https://votre-domaine.com
 
-## Security Vulnerabilities
+Optimisez l'application:
+bashphp artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan optimize
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Compilez les assets:
+bashnpm run build
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Contribution
+Les contributions sont les bienvenues! N'hésitez pas à soumettre une Pull Request.
+Licence
+Ce projet est sous licence MIT.
